@@ -26,30 +26,28 @@ https://github.com/quickbirdstudios/opencv-android
 
 In the app/build.gradle file, specify the following things:
 
-android {
-    ...
-    ...
-    
-    sourceSets {
-            main {
-                jni {
-                    srcDirs 'src\\main\\jni', 'src\\main\\jniLibs'
+
+    android {
+        ...
+        sourceSets {
+                main {
+                    jni {
+                        srcDirs 'src\\main\\jni', 'src\\main\\jniLibs'
+                    }
                 }
             }
-        }
 
-        splits {
-            abi {
-                enable true
-                reset()
-                include 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
-                universalApk true
+            splits {
+                abi {
+                    enable true
+                    reset()
+                    include 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+                    universalApk true
+                }
             }
-        }
-        
-    ...
-    ...
-}
+        ...
+    }
+    
 
 # App Features
 This app has two modules:
@@ -59,8 +57,8 @@ This app has two modules:
   
   
 # SCREEN SHOT
-<img src="https://github.com/NaumanHSA/Android-Face-Recognition-MTCNN-FaceNet/blob/master/ScreenShot/SS1.jpg" width=375/>
-<img src="https://github.com/NaumanHSA/Android-Face-Recognition-MTCNN-FaceNet/blob/master/ScreenShot/SS2.jpg" width=375/>
+<img src="https://github.com/NaumanHSA/Android-Face-Recognition-MTCNN-FaceNet/blob/master/ScreenShot/SS1.jpg" width=800/>
+<img src="https://github.com/NaumanHSA/Android-Face-Recognition-MTCNN-FaceNet/blob/master/ScreenShot/SS2.jpg" width=800/>
 
 
 # References
