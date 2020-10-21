@@ -14,10 +14,16 @@ This model is used to compute the similarity score for two faces. It inputs two 
 
 # BUILD
 After putting .tflite in your assets directory, remember to add this code to your gradle:  
-aaptOptions {  
-　　noCompress "tflite"  
-}  
 
+      android {
+            ...
+            aaptOptions {
+                    noCompress "tflite"
+                    noCompress "lite"
+            } 
+            ...
+      }
+      
 The live camera feature uses android OpenCV, so you'd probably need to configure openCV in your project. 
 1. You can either use the following link for direct configuration withoout NDK dependency which is quite easy.
 https://github.com/quickbirdstudios/opencv-android
